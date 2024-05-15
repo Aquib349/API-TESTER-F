@@ -1,0 +1,60 @@
+.performance-check-component {
+  width: 70%;
+  margin: 1rem auto;
+  max-height: 400px;
+  overflow: auto;
+  border: 1px solid rgb(199, 198, 198);
+  border-radius: 10px;
+}
+
+.input-form {
+  padding: 1rem;
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.text-input {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.action-button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+
+.add-button {
+  background-color: #4caf50;
+}
+
+.remove-button {
+  background-color: #f44336;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-button:hover {
+  background-color: #005f75; /* Darker blue */
+}
