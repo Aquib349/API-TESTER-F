@@ -43,7 +43,7 @@ function PerformanceTest() {
       urls: inputs,
     };
     const response = await fetch(
-      "https://api-performance-tester.onrender.com/api/performance",
+      "https://api-performance-tester.vercel.app/api/performance",
       {
         method: "POST",
         headers: {
