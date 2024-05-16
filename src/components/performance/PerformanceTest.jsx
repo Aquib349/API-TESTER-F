@@ -38,23 +38,28 @@ function PerformanceTest() {
     event.preventDefault();
     setLoading(true); // Set loading to true when submitting the form
 
-    const response = await fetch("http://localhost:5000/api/performance", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // ws://127.0.0.1:9222/devtools/browser/95b569f2-f442-4410-90c6-e2bc72440972
-      body: JSON.stringify({
-        websocketURL: socketURL,
-        urls: inputs,
-      }),
-    });
+    const body_data = {
+      websocketURL: socketURL,
+      urls: inputs,
+    };
+    const response = await fetch(
+      "https://api-performance-tester.onrender.com/api/performance",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // ws://127.0.0.1:9222/devtools/browser/95b569f2-f442-4410-90c6-e2bc72440972
+        body: JSON.stringify(body_data),
+      }
+    );
 
     const data = await response.json();
-    setPerformanceData(data);
+    console.log(data);
+    // setPerformanceData(data);
     setLoading(false);
+    setSocketURL("");
     setInputs([{ id: Math.random().toString(36).substr(2, 9), name: "" }]);
-    // console.log(data);
   };
 
   return (

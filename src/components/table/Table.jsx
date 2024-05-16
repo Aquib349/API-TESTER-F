@@ -5,7 +5,7 @@ function Table({ performanceData }) {
   return (
     <>
       <div className="table-component">
-        <div className="main">
+        <div className="main-table">
           <div className="table-content bg-blue">
             <span className="">Page</span>
             <span className="col-span-2">URL</span>
